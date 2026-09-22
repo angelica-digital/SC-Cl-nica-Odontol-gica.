@@ -1,1 +1,1 @@
-# SC-Cl-nica-Odontol-gica
+# SC-Clinica-Odontolgica
