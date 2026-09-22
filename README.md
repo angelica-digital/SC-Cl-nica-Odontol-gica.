@@ -1,1 +1,1 @@
-# SC-Cl-nica-Odontol-gica.
+# SC-Cl-nica-Odontol-gica
