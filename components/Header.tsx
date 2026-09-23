@@ -4,7 +4,11 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { BOOKING_LINK, NAV_LINKS } from "@/lib/constants";
-import WhatsAppCTA from "./WhatsAppCTA";
+
+// Mesmo visual do WhatsAppCTA (variante primary), agora levando ao
+// agendamento online.
+const CTA_BASE =
+  "focus-ring inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 bg-deep text-ivory hover:bg-deep-dark active:bg-deep-dark shadow-soft";
 
 export default function Header() {
   const pathname = usePathname();
@@ -78,22 +82,17 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            <a
-              href={BOOKING_LINK.href}
-              aria-current={pathname === BOOKING_LINK.href ? "page" : undefined}
-              className="focus-ring whitespace-nowrap text-[0.85rem] font-medium text-graphite/80 transition-colors hover:text-deep aria-[current=page]:text-deep xl:text-[0.9rem]"
-            >
-              {BOOKING_LINK.label}
-            </a>
           </nav>
 
           <div className="hidden shrink-0 lg:block">
-            <WhatsAppCTA
-              location="header"
-              className="whitespace-nowrap px-5 py-2.5 text-[0.8rem] xl:px-6 xl:text-[0.85rem]"
+            <a
+              href={BOOKING_LINK.href}
+              data-location="header"
+              aria-current={pathname === BOOKING_LINK.href ? "page" : undefined}
+              className={`${CTA_BASE} whitespace-nowrap px-5 py-2.5 text-[0.8rem] xl:px-6 xl:text-[0.85rem]`}
             >
-              Agendar avaliação
-            </WhatsAppCTA>
+              {BOOKING_LINK.label}
+            </a>
           </div>
 
           <button
@@ -151,8 +150,8 @@ export default function Header() {
             className="flex flex-col px-5 pt-4 sm:px-8"
             aria-label="Navegação mobile"
           >
-            {[...NAV_LINKS, BOOKING_LINK].map((link) => {
-              const href = link === BOOKING_LINK ? link.href : sectionHref(link.href);
+            {NAV_LINKS.map((link) => {
+              const href = sectionHref(link.href);
               return (
                 <a
                   key={link.href}
@@ -168,14 +167,15 @@ export default function Header() {
           </nav>
 
           <div className="mt-auto px-5 pb-8 pt-8 sm:px-8">
-            <WhatsAppCTA
-              location="header-mobile"
-              className="w-full py-3"
+            <a
+              href={BOOKING_LINK.href}
+              data-location="header-mobile"
+              className={`${CTA_BASE} w-full py-3`}
               onClick={closeMenu}
               tabIndex={menuOpen ? undefined : -1}
             >
-              Agendar avaliação
-            </WhatsAppCTA>
+              {BOOKING_LINK.label}
+            </a>
           </div>
         </div>
       </div>
