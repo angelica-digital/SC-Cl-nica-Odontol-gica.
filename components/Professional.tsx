@@ -1,3 +1,5 @@
+import { existsSync } from "fs";
+import { join } from "path";
 import Image from "next/image";
 import Reveal from "./Reveal";
 import { PROFESSIONALS, type Professional as ProfessionalData } from "@/lib/professionals";
@@ -5,14 +7,20 @@ import { PROFESSIONALS, type Professional as ProfessionalData } from "@/lib/prof
 // Os dados dos profissionais (foto, CRO, áreas de atuação e biografia)
 // ficam em lib/professionals.ts. Campos não preenchidos não são exibidos.
 
+// Verifica no servidor se a foto existe em /public. Enquanto não existir,
+// o card exibe o placeholder com as iniciais em vez de imagem quebrada.
+function photoExists(src: string) {
+  return existsSync(join(process.cwd(), "public", src));
+}
+
 function ProfessionalPhoto({ professional }: { professional: ProfessionalData }) {
-  if (professional.photo) {
+  if (professional.photo && photoExists(professional.photo)) {
     return (
       <Image
         src={professional.photo}
         alt={`${professional.name}, da SC Clínica Odontológica`}
         fill
-        sizes="(max-width: 768px) 90vw, 400px"
+        sizes="(max-width: 768px) 90vw, 440px"
         className="object-cover"
       />
     );
@@ -78,9 +86,9 @@ function ProfessionalCard({ professional }: { professional: ProfessionalData }) 
 export default function Professional() {
   return (
     <section id="profissionais" className="bg-ivory py-20 sm:py-28">
-      <div className="container-page">
+      <div className="container-page container-editorial">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest2 text-sage-dark">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest2 text-[#D46A4A]">
             Quem cuida do seu sorriso
           </p>
           <h2 className="text-balance font-display text-3xl leading-tight text-graphite sm:text-4xl">

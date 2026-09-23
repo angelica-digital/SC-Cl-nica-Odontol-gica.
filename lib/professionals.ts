@@ -20,15 +20,42 @@ export interface Professional {
   bio?: string;
 }
 
+// TEMPORÁRIO: os quatro cards usam a mesma foto até as fotos individuais
+// serem enviadas (previstas: /images/profissionais/dra-helena-meira.webp e
+// /images/profissionais/dra-bianca-oliveira.webp).
+const TEMP_PHOTO = "/images/Foto-Dra.-Selma-Dr.-Renan.webp";
+
 export const PROFESSIONALS: Professional[] = [
   {
-    slug: "selma-cristina-carrasco-zuffo",
-    name: "Dra. Selma Cristina Carrasco Zuffo",
-    initials: "SZ",
+    slug: "selma-carrasco",
+    name: "Dra. Selma Carrasco",
+    initials: "SC",
+    photo: TEMP_PHOTO,
+    areas: ["Responsável Técnica · Ortodontia"],
+    bio: "Conduz a clínica e a maior parte dos atendimentos, com ampla experiência e acompanhamento contínuo dos pacientes.",
   },
   {
-    slug: "renan-carrasco-zuffo",
-    name: "Dr. Renan Carrasco Zuffo",
-    initials: "RZ",
+    slug: "renan-carrasco",
+    name: "Dr. Renan Carrasco",
+    initials: "RC",
+    photo: TEMP_PHOTO,
+    areas: ["Prótese e Dentística"],
+    bio: "Atua na reabilitação estética e funcional, com próteses e procedimentos restauradores de alta precisão.",
+  },
+  {
+    slug: "helena-meira",
+    name: "Dra. Helena Meira",
+    initials: "HM",
+    photo: TEMP_PHOTO,
+    areas: ["Implantodontia"],
+    bio: "Responsável pela área cirúrgica da implantodontia, com planejamento criterioso de cada caso.",
+  },
+  {
+    slug: "bianca-oliveira",
+    name: "Dra. Bianca Oliveira",
+    initials: "BO",
+    photo: TEMP_PHOTO,
+    areas: ["Cirurgia Odontológica"],
+    bio: "Atua na cirurgia odontológica, realizando extrações e procedimentos cirúrgicos quando indicados.",
   },
 ];

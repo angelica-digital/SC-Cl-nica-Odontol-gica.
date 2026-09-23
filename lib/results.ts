@@ -20,28 +20,30 @@ export interface ResultCase {
   altAfter: string;
 }
 
+// TEMPORÁRIO: os três casos usam o mesmo par de imagens ilustrativas de
+// clareamento até as fotos definitivas de cada tratamento serem enviadas.
 export const RESULT_CASES: ResultCase[] = [
   {
     slug: "clareamento",
     treatment: "Clareamento dental",
-    beforeImage: "/images/resultados/clareamento-antes.jpg",
-    afterImage: "/images/resultados/clareamento-depois.jpg",
+    beforeImage: "/images/resultados/clareamento-antes.webp",
+    afterImage: "/images/resultados/clareamento-depois.webp",
     altBefore: "Sorriso antes do clareamento dental",
     altAfter: "Sorriso depois do clareamento dental",
   },
   {
     slug: "facetas",
     treatment: "Facetas",
-    beforeImage: "/images/resultados/facetas-antes.jpg",
-    afterImage: "/images/resultados/facetas-depois.jpg",
+    beforeImage: "/images/resultados/clareamento-antes.webp",
+    afterImage: "/images/resultados/clareamento-depois.webp",
     altBefore: "Sorriso antes da aplicação de facetas",
     altAfter: "Sorriso depois da aplicação de facetas",
   },
   {
     slug: "implante",
     treatment: "Implantes / reabilitação",
-    beforeImage: "/images/resultados/implante-antes.jpg",
-    afterImage: "/images/resultados/implante-depois.jpg",
+    beforeImage: "/images/resultados/clareamento-antes.webp",
+    afterImage: "/images/resultados/clareamento-depois.webp",
     altBefore: "Sorriso antes da reabilitação com implantes",
     altAfter: "Sorriso depois da reabilitação com implantes",
   },

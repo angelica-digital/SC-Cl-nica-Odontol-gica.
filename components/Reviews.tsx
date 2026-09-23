@@ -4,9 +4,9 @@ import Reveal from "./Reveal";
 export default function Reviews() {
   return (
     <section id="avaliacoes" className="bg-white py-20 sm:py-28">
-      <div className="container-page">
+      <div className="container-page container-editorial">
         <Reveal className="mx-auto flex max-w-xl flex-col items-center text-center">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest2 text-sage-dark">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest2 text-[#D46A4A]">
             Avaliações
           </p>
           <h2 className="font-display text-3xl leading-tight text-graphite sm:text-4xl">

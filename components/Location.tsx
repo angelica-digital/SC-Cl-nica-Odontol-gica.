@@ -11,9 +11,9 @@ import {
 export default function Location() {
   return (
     <section id="localizacao" className="bg-ivory py-20 sm:py-28">
-      <div className="container-page grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-16">
+      <div className="container-page container-editorial grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-16">
         <Reveal>
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest2 text-sage-dark">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest2 text-[#D46A4A]">
             Localização
           </p>
           <h2 className="font-display text-3xl leading-tight text-graphite sm:text-4xl">

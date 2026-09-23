@@ -20,7 +20,7 @@ export default function ResultsSection() {
     <section id="resultados" className="bg-ivory py-20 sm:py-28">
       <div className="container-page">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest2 text-sage-dark">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest2 text-[#D46A4A]">
             Antes e depois
           </p>
           <h2 className="text-balance font-display text-3xl leading-tight text-graphite sm:text-4xl">

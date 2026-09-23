@@ -75,6 +75,14 @@ body {
   }
 }
 
+/* Largura mais contida para as seções editoriais. Usar junto com
+   .container-page (mantém o mesmo padding lateral): o limite abaixo
+   garante 1000px de CONTEÚDO no desktop (1000px + 2 × 3rem de padding).
+   Header, Hero, Antes e Depois, Footer e /agendamento seguem com 1280px. */
+.container-editorial {
+  max-width: calc(1000px + 6rem);
+}
+
 .focus-ring {
   outline: none;
 }

@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 export default function About() {
   return (
     <section id="a-clinica" className="bg-ivory py-20 sm:py-28">
-      <div className="container-page grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
+      <div className="container-page container-editorial grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
         <Reveal className="relative order-2 lg:order-1">
           <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-xl2 shadow-soft lg:max-w-none">
             <Image
@@ -22,7 +22,7 @@ export default function About() {
         </Reveal>
 
         <Reveal delay={100} className="order-1 lg:order-2">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest2 text-sage-dark">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest2 text-[#D46A4A]">
             A clínica
           </p>
           <h2 className="font-display text-3xl leading-tight text-graphite sm:text-4xl">

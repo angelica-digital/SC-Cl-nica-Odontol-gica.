@@ -8,7 +8,7 @@ interface CTAProps {
 export default function CTA({ location }: CTAProps) {
   return (
     <section className="bg-deep py-16 sm:py-20">
-      <div className="container-page">
+      <div className="container-page container-editorial">
         <Reveal className="mx-auto flex max-w-2xl flex-col items-center gap-6 text-center">
           <h2 className="font-display text-3xl leading-tight text-ivory sm:text-4xl">
             Seu cuidado pode começar com uma conversa.

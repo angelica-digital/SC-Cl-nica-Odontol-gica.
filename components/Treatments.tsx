@@ -6,9 +6,9 @@ import { TREATMENTS } from "@/lib/treatments";
 export default function Treatments() {
   return (
     <section id="tratamentos" className="bg-white py-20 sm:py-28">
-      <div className="container-page">
+      <div className="container-page container-editorial">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest2 text-sage-dark">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest2 text-[#D46A4A]">
             Tratamentos
           </p>
           <h2 className="font-display text-3xl leading-tight text-graphite sm:text-4xl">
@@ -39,7 +39,7 @@ export default function Treatments() {
                     rel="noopener noreferrer"
                     data-event="whatsapp_click"
                     data-location="tratamentos"
-                    className="focus-ring mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-deep transition-colors hover:text-sage-dark"
+                    className="focus-ring mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#D46A4A] transition-colors hover:text-sage-dark"
                   >
                     Saiba mais
                     <ArrowUpRight className="h-4 w-4" strokeWidth={1.8} aria-hidden="true" />
